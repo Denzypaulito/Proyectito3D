@@ -1,0 +1,38 @@
+# Ignorar archivos generados por Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Aa]ssets/AssetStoreTools*
+*[Ll]og*
+
+# Ignorar archivos generados por Visual Studio o Visual Studio Code
+.vscode/
+.vs/
+[Oo]bj/
+[Bb]in/
+[Oo]ut/
+
+# Ignorar archivos temporales y copias de seguridad
+[Tt]emp/
+[Tt]humbs.db
+*[~$]*
+*.bak
+*.swp
+*.[Ee][Xx][Ee]
+
+# Ignorar archivos de importación de paquetes personalizados
+[Oo]bj/[Dd]ebug/
+[Oo]bj/[Rr]elease/
+[Oo][Uu][Tt]/
+
+# Ignorar archivos específicos generados por Unity
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/UnityConnectSettings.asset
+ProjectSettings/EditorBuildSettings.asset
+
+# Ignorar registros de colisión
+[Oo]bj/[Cc]ollision/[Cc]ollision
