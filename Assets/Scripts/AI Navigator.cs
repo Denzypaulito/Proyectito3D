@@ -5,7 +5,7 @@ public class AINavigator : MonoBehaviour
 {
     public Transform target;
     NavMeshAgent agent;
-    Animator anim; 
+    Animator anim;
 
     private void Awake()
     {

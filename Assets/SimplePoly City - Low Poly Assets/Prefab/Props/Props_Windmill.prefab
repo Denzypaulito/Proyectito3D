@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2300002}
   - component: {fileID: 9500000}
   - component: {fileID: 3801541962943991133}
+  - component: {fileID: -1509739055998932094}
   m_Layer: 0
   m_Name: Props_Windmill
   m_TagString: Untagged
@@ -212,3 +213,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2605c818ea0c2df4092b898402e71aae, type: 3}
+--- !u!208 &-1509739055998932094
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.1, y: 3.0100002, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.01, y: 3.0100002, z: -0.020000001}
+  m_TimeToStationary: 0.5
