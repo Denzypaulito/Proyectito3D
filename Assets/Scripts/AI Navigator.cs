@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class AINavigator : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     NavMeshAgent agent;
     Animator anim;
 
