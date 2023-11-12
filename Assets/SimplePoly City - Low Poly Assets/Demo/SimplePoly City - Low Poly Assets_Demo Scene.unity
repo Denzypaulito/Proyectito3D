@@ -17259,8 +17259,8 @@ MonoBehaviour:
   playerTransform: {fileID: 2124982613}
   maxTime: 1
   maxDistance: 1
-  areaCenter: {x: -18.2, y: 0, z: 100}
-  areaSize: {x: 22.4, y: 260}
+  areaCenter: {x: 120, y: 0, z: 100}
+  areaSize: {x: 300, y: 260}
   minTimeBetweenTp: 5
   maxTimeBetweenTp: 15
   timeTp: 0
@@ -50008,8 +50008,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.3880965, z: 1.836113}
-  m_Center: {x: 0, y: 0.69377965, z: 3.0995264}
+  m_Size: {x: 2.1325474, y: 1.5, z: 5.5268607}
+  m_Center: {x: -0.0035071373, y: 0.75, z: -0.016043425}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
