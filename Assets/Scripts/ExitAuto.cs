@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 
 public class ExitAuto : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class ExitAuto : MonoBehaviour
 
     public void ExitVehicle()
     {
+        Input.ResetInputAxes();
+        //jugador.GetComponent<ThirdPersonController>().Update();
+        //jugador.GetComponent<ThirdPersonController>().enabled = true;
         jugador.transform.position = gameObject.transform.position;
         camaraVehiculo.SetActive(false);
         EntryAuto.gameObject.SetActive(true);

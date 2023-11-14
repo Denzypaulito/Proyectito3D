@@ -122,6 +122,13 @@ namespace StarterAssets
             }
         }
 
+        public void OnEnable() {
+            if(this._input != null) {
+                this._input.move = new Vector2(0,0);
+                this._input.look = new Vector2(0,0);
+            }
+        }
+
 
         private void Awake()
         {
@@ -152,7 +159,7 @@ namespace StarterAssets
             _fallTimeoutDelta = FallTimeout;
         }
 
-        private void Update()
+        public void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
 

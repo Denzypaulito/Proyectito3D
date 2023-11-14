@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 
 public class EntryAuto : MonoBehaviour
 {
@@ -51,6 +52,8 @@ public class EntryAuto : MonoBehaviour
     {
         if (puedoEntrar)
         {
+            //Input.ResetInputAxes();
+            //jugador.GetComponent<ThirdPersonController>().enabled = false;
             jugador.SetActive(false);
             camaraVehiculo.SetActive(true);
             Prometheus.GetComponent<Rigidbody>().drag = 0.05f;
