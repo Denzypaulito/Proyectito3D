@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Contador : MonoBehaviour
 {
     public Text relojText;
-    private float tiempoInicial = 300f; // 24 minutos en segundos
+    private float tiempoInicial = 360f; // 24 minutos en segundos
     private float tiempoRestante = 1440f;
     void Start()
     {
