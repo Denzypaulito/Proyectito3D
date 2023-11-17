@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 537355053988934659}
   - component: {fileID: 4623858854761757613}
   - component: {fileID: 6658940904841357667}
+  - component: {fileID: 8112856206893150560}
   m_Layer: 0
   m_Name: Props_Traffic Signal_big
   m_TagString: Untagged
@@ -219,3 +220,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.526083, y: 1.0817657, z: 0.2928299}
   m_Center: {x: 0.0031386018, y: 0.5409248, z: -0.029244319}
+--- !u!114 &8112856206893150560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb64741236442f4283753173ae5e70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prop: {fileID: 100000}
