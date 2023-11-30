@@ -8,12 +8,21 @@ public class Contador : MonoBehaviour
     public Text relojText;
     private float tiempoInicial = 360f; // 24 minutos en segundos
     private float tiempoRestante = 1440f;
+
+    private float points = 0;
+
+    public Text Score;
+
+
     void Start()
     {
         // Llama a la función ActualizarReloj cada segundo
         InvokeRepeating("ActualizarReloj", 0f, 1f);
     }
 
+    public void SumPoints(float pointsNew){
+        points += pointsNew;
+    }
     void ActualizarReloj()
     {
         // Resta un segundo al tiempo restante
@@ -29,6 +38,7 @@ public class Contador : MonoBehaviour
 
         // Actualiza el objeto de texto con la hora actual
         relojText.text = horaActual;
+        Score.text = "Damage: " + points;
 
         // Si el tiempo restante llega a cero, puedes manejar aquí la lógica de lo que sucede después
         if (tiempoRestante <= 0)

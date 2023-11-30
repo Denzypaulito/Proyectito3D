@@ -10,10 +10,11 @@ public class Ragdoll : MonoBehaviour
     public bool golpe;
     public AILocomotion AILocomotion;
 
-    public Text Score;
-
-    public int Points;
     UnityEngine.AI.NavMeshAgent navMeshAgent;
+
+    [SerializeField] private float cantidadPuntos;
+
+    [SerializeField] private Contador menu;
 
     void Start()
     {
@@ -33,8 +34,6 @@ public class Ragdoll : MonoBehaviour
             AILocomotion.enabled = false;
             navMeshAgent.enabled = false;
             ActivateRagdoll();
-            Points += 30;
-            Score.text = "Damage: " + Points;
         }
     }
 
@@ -61,6 +60,7 @@ public class Ragdoll : MonoBehaviour
         foreach (var rigidBody in rigidBodies)
         {
             rigidBody.isKinematic = false;
+            menu.SumPoints(cantidadPuntos);
         }
         animator.enabled = false;
     }
