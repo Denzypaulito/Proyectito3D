@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Ragdoll : MonoBehaviour
 {
     public GameObject vehiculo;
@@ -10,6 +10,9 @@ public class Ragdoll : MonoBehaviour
     public bool golpe;
     public AILocomotion AILocomotion;
 
+    public Text Score;
+
+    public int Points;
     UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     void Start()
@@ -30,6 +33,8 @@ public class Ragdoll : MonoBehaviour
             AILocomotion.enabled = false;
             navMeshAgent.enabled = false;
             ActivateRagdoll();
+            Points += 30;
+            Score.text = "Damage: " + Points;
         }
     }
 
