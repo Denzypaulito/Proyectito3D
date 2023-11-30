@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using StarterAssets;
+using Cinemachine;
 
 public class ExitAuto : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ExitAuto : MonoBehaviour
     public GameObject Velocity;
     public GameObject Prometheus;
 
+    public CinemachineVirtualCamera virtualCamera;
     
     // Start is called before the first frame update
     void Start()
@@ -42,7 +44,8 @@ public class ExitAuto : MonoBehaviour
         //jugador.GetComponent<ThirdPersonController>().Update();
         //jugador.GetComponent<ThirdPersonController>().enabled = true;
         jugador.transform.position = gameObject.transform.position;
-        camaraVehiculo.SetActive(false);
+        virtualCamera.enabled = true;
+        //camaraVehiculo.SetActive(false);
         EntryAuto.gameObject.SetActive(true);
         gameObject.SetActive(false);
         SoundsVehicle.SetActive(false);

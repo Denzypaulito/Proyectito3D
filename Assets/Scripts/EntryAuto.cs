@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using StarterAssets;
+using Cinemachine;
 
 public class EntryAuto : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EntryAuto : MonoBehaviour
     public GameObject SoundsVehicle;
     public GameObject Velocity;
     public GameObject Prometheus;
+
+    public CinemachineVirtualCamera virtualCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +58,8 @@ public class EntryAuto : MonoBehaviour
             //Input.ResetInputAxes();
             //jugador.GetComponent<ThirdPersonController>().enabled = false;
             jugador.SetActive(false);
-            camaraVehiculo.SetActive(true);
+            //camaraVehiculo.SetActive(true);
+            virtualCamera.enabled = false;
             Prometheus.GetComponent<Rigidbody>().drag = 0.05f;
             PrometeoCarController.enabled = true;
             SoundsVehicle.SetActive(true);
