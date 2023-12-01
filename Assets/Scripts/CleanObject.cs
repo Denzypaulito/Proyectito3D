@@ -1,12 +1,16 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CleanObject : MonoBehaviour
 {
     private Vector3[] posicionesIniciales; // Almacena las posiciones iniciales de los objetos hijos
     public GameObject water; // Asigna el objeto que deseas activar desde el Inspector
     public GameObject hydrant;
     private bool yaCambiado = false; // Bandera para asegurarse de que la acción solo se realice una vez
+    [SerializeField] private float cantidadPuntos;
 
+    [SerializeField] private Contador menu;
+
+    public Text Score;
     void Start()
     {
         // Almacena las posiciones iniciales de los objetos hijos
@@ -26,6 +30,7 @@ public class CleanObject : MonoBehaviour
             yaCambiado = true; // Marcar como procesado para evitar la repetición
             water.SetActive(true);
             hydrant.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000.0f, ForceMode.Impulse);
+            menu.SumPoints(cantidadPuntos);
             Invoke("EliminarObjeto", 2.0f);
             Invoke("DesactiveObject", 30.0f);
         }
