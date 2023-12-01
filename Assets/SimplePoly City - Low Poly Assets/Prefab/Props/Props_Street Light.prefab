@@ -123,7 +123,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.1, y: 3.0100002, z: 0.1}
+  m_Extents: {x: 0.4, y: 3.0100002, z: 0.4}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -225,7 +225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb64741236442f4283753173ae5e70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 0
+  menu: {fileID: 0}
   prop: {fileID: 100000}
+  Score: {fileID: 0}
+  Points: 0
+  i: 0
 --- !u!1 &834948041487855972
 GameObject:
   m_ObjectHideFlags: 0

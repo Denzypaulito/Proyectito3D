@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     // Llamar a esta función para pausar el juego
     public void Pause()
     {
+        Cursor.lockState = CursorLockMode.None; // Libera el cursor
+        Cursor.visible = true; // Hace visible el cursor
         Debug.Log(menu.Corpse());
         Time.timeScale = 0f;
         DesactivarObjeto();
@@ -22,6 +24,8 @@ public class PauseMenu : MonoBehaviour
     // Llamar a esta función para reanudar el juego
     public void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor
+        Cursor.visible = false; // Oculta el cursor
         Time.timeScale = 1f;
         ActivarObjeto();
     }
@@ -54,7 +58,6 @@ public class PauseMenu : MonoBehaviour
     // Método para desactivar el objeto
     private void DesactivarObjeto()
     {
-        Cursor.visible = true;
         objetoADesactivar.SetActive(false);
         objetoADesactivar3.SetActive(true);
         if (!objetoADesactivar4.activeSelf){
@@ -65,7 +68,6 @@ public class PauseMenu : MonoBehaviour
     // Método para activar el objeto
     private void ActivarObjeto()
     {
-        Cursor.visible = false;
         objetoADesactivar.SetActive(true);
         objetoADesactivar3.SetActive(false);
         if (!objetoADesactivar4.activeSelf){
