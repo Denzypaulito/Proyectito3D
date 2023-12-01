@@ -10,6 +10,7 @@ public class Ragdoll : MonoBehaviour
     public bool golpe;
     public AILocomotion AILocomotion;
 
+    public GameObject prop;
     UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     [SerializeField] private float cantidadPuntos;
@@ -33,7 +34,9 @@ public class Ragdoll : MonoBehaviour
             golpe = true;
             AILocomotion.enabled = false;
             navMeshAgent.enabled = false;
+            Invoke("EliminarObject", 3.0f);
             ActivateRagdoll();
+            
         }
     }
 
@@ -57,11 +60,20 @@ public class Ragdoll : MonoBehaviour
 
     public void ActivateRagdoll()
     {
+        menu.SumPoints(cantidadPuntos);
+        menu.SumDeaths(1.0f);
         foreach (var rigidBody in rigidBodies)
         {
             rigidBody.isKinematic = false;
-            menu.SumPoints(cantidadPuntos);
+            
         }
         animator.enabled = false;
+    }
+    void EliminarObject()
+    {
+        if (prop != null)
+    {
+        Destroy(prop);
+    }
     }
 }

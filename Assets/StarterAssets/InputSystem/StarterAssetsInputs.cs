@@ -28,10 +28,15 @@ namespace StarterAssets
 
 		public void OnLook(InputValue value)
 		{
-			if(cursorInputForLook)
+			if(cursorInputForLook && Time.timeScale == 1f)
 			{
 				LookInput(value.Get<Vector2>());
 			}
+			else
+			{
+				look = Vector2.zero;
+			}
+
 		}
 
 		public void OnJump(InputValue value)
@@ -54,6 +59,7 @@ namespace StarterAssets
 		public void LookInput(Vector2 newLookDirection)
 		{
 			look = newLookDirection;
+			
 		}
 
 		public void JumpInput(bool newJumpState)

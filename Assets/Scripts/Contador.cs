@@ -11,7 +11,11 @@ public class Contador : MonoBehaviour
 
     private float points = 0;
 
+    private float deaths = 0;
+
     public Text Score;
+
+    public Text Deaths;
 
 
     void Start()
@@ -23,6 +27,13 @@ public class Contador : MonoBehaviour
     public void SumPoints(float pointsNew){
         points += pointsNew;
     }
+    public void SumDeaths(float deathsNew){
+        deaths += deathsNew;
+    }
+    public float Corpse(){
+        return deaths;
+    }
+
     void ActualizarReloj()
     {
         // Resta un segundo al tiempo restante
@@ -39,6 +50,8 @@ public class Contador : MonoBehaviour
         // Actualiza el objeto de texto con la hora actual
         relojText.text = horaActual;
         Score.text = "Damage: " + points;
+
+        Deaths.text = "People Death: " + deaths + "/100";
 
         // Si el tiempo restante llega a cero, puedes manejar aquí la lógica de lo que sucede después
         if (tiempoRestante <= 0)

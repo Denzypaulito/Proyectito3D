@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AILocomotion : MonoBehaviour
 {
-    public Transform playerTransform;
+    //public Transform playerTransform;
     public float maxTime = 1.0f;
     public float maxDistance = 1.0f;
     public Vector3 areaCenter; // Centro del área permitida
@@ -32,11 +32,11 @@ public class AILocomotion : MonoBehaviour
 
         if (timer < 0.0f)
         {
-            float sqDistance = (playerTransform.position - agent.destination).sqrMagnitude;
-            if (sqDistance > maxDistance)
-            {
+            //float sqDistance = (playerTransform.position - agent.destination).sqrMagnitude;
+            //if (sqDistance > maxDistance)
+            //{
                 SetRandomDestination();
-            }
+            //}
             timer = maxTime;
         }
 

@@ -35,8 +35,8 @@ public class CleanObject2 : MonoBehaviour
                 menu.SumPoints(cantidadPuntos);
             }
             i = 1;
-            prop.GetComponent<Rigidbody>().AddForce(Vector3.up * 0.5f, ForceMode.Impulse);
-            Invoke("DesactivarRigidbody", 1.0f);
+            prop.GetComponent<Rigidbody>().mass *= 0.01f;
+            //Invoke("DesactivarRigidbody", 1.0f);
             Invoke("EliminarObject", 3.0f);
         }
     }
@@ -44,8 +44,7 @@ public class CleanObject2 : MonoBehaviour
     void DesactivarRigidbody()
     {
         // Desactiva el Rigidbody
-        rb.isKinematic = true;
-        rb.detectCollisions = false;
+        //rb.detectCollisions = false;
 
         // Alternativamente, puedes desactivar el objeto completo
         // prop.SetActive(false);
